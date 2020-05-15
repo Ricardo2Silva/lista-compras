@@ -1,0 +1,28 @@
+body{
+  background: #333;
+  color:#fff;
+}
+.navbar{
+  border-bottom:blue 2px solid ;
+  opacity: 0.8;
+}
+#home-secao{
+  background:url(../../../assets/images-_3_.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 600px;
+}
+
+/* #home-secao .dark-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 600px;
+  background:rgba(0,0,0,0.7);
+
+} */
+#home-secao .home-inner {
+  padding-top: 150px;
+}
