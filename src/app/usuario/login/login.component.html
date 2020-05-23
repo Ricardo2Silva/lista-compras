@@ -6,15 +6,23 @@
     <div class="col-lg-4  ">
       <div class="card bg-success text-center card-form">
         <div class="card-body">
-          <form>
+          <form #Login="ngForm" (ngSubmit)="onSubmit()">
             <h4>Para logar, insira seus dados</h4>
             <div class="form-group">
-              <input type="email" class="form-control form-control-lg" placeholder="Email">
+              <input type="email"
+                     class="form-control form-control-lg"
+                     placeholder="Email"
+                     [(ngModel)]="login.email"
+                     name="email">
             </div>
             <div class="form-group">
-              <input type="password" class="form-control form-control-lg" placeholder="Senha">
+              <input type="password"
+                     class="form-control form-control-lg"
+                     placeholder="Senha"
+                     [ngModel]="login.senha"
+                     name="senha">
             </div>
-            <input type="submit" value="Login" class="btn btn-outline-light btn-block">
+            <button type="submit" class="btn btn-outline-light btn-block">Login</button>
           </form>
         </div>
       </div>

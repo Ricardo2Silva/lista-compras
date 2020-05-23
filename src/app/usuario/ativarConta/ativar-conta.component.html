@@ -2,13 +2,24 @@
   <div class="col-lg-4  ">
     <div class="card bg-success text-center card-form">
       <div class="card-body">
-        <form>
+        <form #usuario="ngForm" (ngSubmit)="onSubmit()">
           <h4>Para ativar sua conta</h4>
-          <p>Insira o código enviado para o seu Email, respeitando as letras Maiúsculas e Minúsculas</p><hr>
+          <p>Para sua segurança enviamos um código de ativação para o seu Email, insira o código respeitando as letras maiúsculas e minúsculas</p><hr>
           <div class="form-group">
-            <input type="text" class="form-control form-control-lg" placeholder="Insira o codigo">
+            <input type="email"
+                   class="form-control form-control-lg"
+                   placeholder="Insira o email"
+                   [(ngModel)]="ativarUsuario.email"
+                   name="email">
           </div>
-          <input type="submit" value="Ativar Conta" class="btn btn-outline-light btn-block">
+          <div class="form-group">
+            <input type="text"
+                   class="form-control form-control-lg"
+                   placeholder="Insira o codigo"
+                   [(ngModel)]="ativarUsuario.activationCode"
+                   name="codigo">
+          </div>
+          <button type="submit" value="Ativar Conta" class="btn btn-outline-light btn-block">Ativar Conta</button>
         </form>
       </div>
     </div>

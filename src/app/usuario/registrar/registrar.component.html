@@ -1,0 +1,36 @@
+<div class=" container">
+  <div class="card bg-success text-center card-form">
+    <div class="card-body">
+      <h3>Se inscreva hoje!</h3>
+      <p>Por favor preencha este formulario</p>
+      <form #usuarioForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <input type="text"
+                 class="form-control form-control-lg"
+                 placeholder="Usuario"
+                 [(ngModel)]="usuario.nome"
+                 name="nome">
+        </div>
+        <div class="form-group">
+          <input type="email"
+                 class="form-control form-control-lg"
+                 placeholder="Email"
+                 [(ngModel)]="usuario.email"
+                 name="email">
+        </div>
+        <div class="form-group">
+          <input type="password"
+                 class="form-control form-control-lg"
+                 placeholder="Senha"
+                 [(ngModel)]="usuario.senha"
+                 name="senha">
+        </div>
+        <!-- <div class="form-group">
+          <input type="password" class="form-control form-control-lg" placeholder="Confirme a senha">
+        </div> -->
+        <button type="submit" value="Inscreva-se" class="btn btn-outline-light btn-block">Inscreva-se</button>
+        <a href="#">Já é inscrito? Clique Aqui</a>
+      </form>
+    </div>
+  </div>
+</div>
