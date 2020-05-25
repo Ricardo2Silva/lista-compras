@@ -20,5 +20,15 @@ export class LoginComponent{
   }
   onSubmit(){
     console.log(this.login)
+    this.usuarioService.logarUsuario(this.login).subscribe(
+      (data) =>{
+        console.log(data);
+        console.log('usuario cadastrado com sucesso');
+      },
+      (error) =>{
+        console.log(error);
+      }
+
+    )
   }
 }
